@@ -1,7 +1,9 @@
 import '../assests/css/compo.css';
-import{useSate} from 'react';
+import{useState} from 'react';
+import Profile from './Profile';
+
 export default function StudentTable(props){
-    const[stu,setStu] = useSate(props.students[0]);
+    const[stu,setStu] = useState(props.students[0]);
     return(
        <div className="outerDiv">
            <div className="leftDiv">
@@ -30,7 +32,7 @@ export default function StudentTable(props){
             </tbody>
            </table>
            </div>
-           <div className='rightDiv'>
+           <div className="rightDiv">
                <Profile stu={stu}/>
            </div>
        </div>
